@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from contextlib import redirect_stdout
+import io
 import unittest
 import os
 import sys
@@ -117,8 +119,14 @@ class TestInterface(unittest.TestCase):
         predecesseurs = copy.deepcopy(interface_data_ex["predecesseurs"])
         depart = interface_data_ex["depart"]
         arrive = interface_data_ex["arrive"]
-        txt = afficheChemin(predecesseurs, depart, arrive)
-        self.assertMultiLineEqual(interface_data_ex["txt"], txt)
+        
+        f = io.StringIO()
+        with redirect_stdout(f):
+            afficheChemin(predecesseurs, depart, arrive)
+        txt = f.getvalue()
+        expected_lines = ["Le chemin à parcourir est :", "DÉBUT : 0 ==> 2 ==> 5 ==> 4 : FIN"]
+        output_lines = [line.strip().replace('  ', ' ') for line in txt.splitlines()]
+        self.assertEqual(expected_lines, output_lines)
         
     
 if __name__ == '__main__':

@@ -402,7 +402,7 @@ afficheChemin(predecesseurs, depart, arrive)
 ```
 
     Le chemin à parcourir est :
-    	 DÉBUT : 0  ==> 2  ==> 5  ==>  4 : FIN 
+    	DÉBUT : 0 ==> 2 ==> 5 ==> 4 : FIN
 	 
 -------------------------------------------------------------------------------------------------------------------------------------------------------	
 ### 3.3. Module principal <a name="principale"></a> 
