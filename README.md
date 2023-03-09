@@ -318,12 +318,11 @@ print(txt.format(depart, arrive, indice, prédécesseurs))
 	<dd><b>Renvoie:</b></dd>
 		<ol><ul>
 			<li><b>matrice[mxn]</b>: matrice d’adjacence saisit au clavier.</li>
-			<li><b>predecesseur[1xn]</b>: vecteur des nœuds précédent pour se rendre au départ.</li>
   	</ul></ol>
 </dl>	
 
 ```python
-matrice = aisirMatrice()
+matrice = saisirMatrice()
 ```
 
     Donner le nombre de noeuds dans la matrice: 3
