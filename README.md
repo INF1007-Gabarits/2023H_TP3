@@ -83,7 +83,7 @@ Dans ce qui suit, nous expliquons les différents concepts.
     <em><b>Fig. 4 : Visite du nœud 1.</b></em>
 </p>
 
-<p align='justify'>  Le nœud non visité qui a la distance la plus petite dans le tableau *Distancement* est le nœud (2). Par la suite, il devient le nœud suivant à visiter (figure 5). Et ainsi de suite (voir les figures 6 et 7).</p>
+<p align='justify'>  Le nœud non visité qui a la distance la plus petite dans le tableau *Distancement* est le nœud (2). Par la suite, il devient le nœud suivant à visiter (figure 5). Cependant, si la distance entre le noeud voisin et le noeud initial est déjà inférieure à la nouvelle distance explorée, il ne faut pas modifier celle-ci dans le tableau (exemple: la distance entre le noeud 1 et 3 est de 9, tandis que la distance 1-2-3 est de 7+10, donc on ne modifie pas la colonne 3 du tableau). Cette distance est toujours calculée par rapport au noeud initial. Et ainsi de suite (voir les figures 6 et 7).</p>
 
 <p align="center">
   <img src="Img/Fig_05.PNG" alt>
@@ -146,8 +146,8 @@ La figure 12 représente l'arbre des appels de fonctions à implémenter.
   	</ul></ol>
 	<dd><b>Renvoie:</b></dd>
 		<ol><ul>
-			<li><b>indice[1x1]</b>: l’indice de la case minimum.</li>
-			<li><b>minim[1x1]</b>: la valeur minimum du vecteur.</li>
+			<li><b>indice, int</b>: l’indice de la case minimum.</li>
+			<li><b>minim, int</b>: la valeur minimum du vecteur.</li>
   	</ul></ol>
 		<dd><p align='justify'><code> <b>Note:</b> Valide que vec est une liste de valeurs numériques plus grandes ou égales à -1s.</code></p></dd>
 
