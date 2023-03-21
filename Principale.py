@@ -13,7 +13,7 @@ def meilleurCheminDijkstra():
     if (choix == 1):
         matrice = saisirMatrice()
     elif (choix == 2):
-        nbSommets = input('Donner le nombre de sommets : ')
+        nbSommets = int(input('Donner le nombre de sommets : '))
         matrice = genereMatriceAleatoire(nbSommets)
     else:
         print('Choix invalide.')
